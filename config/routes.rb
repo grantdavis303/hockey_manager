@@ -11,5 +11,5 @@ Rails.application.routes.draw do
     get "/", to: "welcome#index"
 
     get "/teams", to: "teams#index"
-    get "/players", to: "plaers#index"
+    get "/players", to: "players#index"
 end
