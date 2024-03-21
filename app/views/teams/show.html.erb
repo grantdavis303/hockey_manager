@@ -1,1 +1,11 @@
 <h1> <%= @team.name %> </h1>
+
+<p> Current Season Wins: <%= @team.season_wins %> </p>
+
+<p> Eligible for this year's playoffs? 
+    <%= 
+if @team.playoff_eligible == true
+    "Yes!"
+else
+    "Unfortunately not this year."
+end %> </p>

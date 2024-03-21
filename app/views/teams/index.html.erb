@@ -2,6 +2,6 @@
 
 <% @teams.each do |team| %>
 
-    <p> <%= team.name %> </p>
+    <p> <%= link_to team.name, "/teams/#{team.id}" %> </p>
 
 <% end %>
