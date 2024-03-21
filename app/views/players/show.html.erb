@@ -1,1 +1,13 @@
-<h1> Player </h1>
+<h1> <%= @player.name %> </h1>
+
+<h2> Plays for the... <!-- <%= @player.team_id %> --> </h2>
+
+<p> Jersey Number: <%= @player.jersey_number %> </p>
+
+<p> Has previously won a Stanley Cup?
+<%= 
+if @player.won_cup == true
+    "Yes!"
+else
+    "Unfortunately not."
+end %> </p>
