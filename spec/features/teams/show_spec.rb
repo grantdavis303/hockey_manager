@@ -25,8 +25,22 @@ RSpec.describe "teams show page", type: :feature do
             
             visit "/teams/#{team.id}"
             
-            expect(page).to have_content("Yes!" || "Unfortunately not this year.")
+            expect(page).to have_content("Yes!" || "Unfortunately not this year.") # EDIT LATER
         end        
+    end
+
+    # User Story 7
+    describe 'includes additional team information' do
+        it 'includes team current player count' do
+            team = Team.create!(name: "Colorado Avalanche", season_wins: 44, playoff_eligible: true)
+            team.players.create!(name: "Nathan MacKinnon", jersey_number: 29, won_cup: true)
+            team.players.create!(name: "Mikko Rantanen", jersey_number: 96, won_cup: true)
+            team.players.create!(name: "Casey Mittelstadt", jersey_number: 37, won_cup: false)
+            
+            visit "/teams/#{team.id}"
+
+            expect(page).to have_content("Current Player Count: #{team.players.count}")
+        end  
     end
 
 end
