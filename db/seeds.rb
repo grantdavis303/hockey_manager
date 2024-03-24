@@ -10,11 +10,16 @@
 
 # rails db:seed
 
+print "Seeding"
+
 Team.create!(
     name: "Colorado Avalanche",
     season_wins: 44,
     playoff_eligible: true
 )
+
+sleep(1)
+print "."
 
 Player.create!(
     team_id: 1,
@@ -23,12 +28,18 @@ Player.create!(
     won_cup: true
 )
 
+sleep(1)
+print "."
+
 Player.create!(
     team_id: 1,
     name: "Mikko Rantenen",
     jersey_number: 96,
     won_cup: true
 )
+
+sleep(1)
+print "."
 
 Player.create!(
     team_id: 1,
@@ -37,11 +48,17 @@ Player.create!(
     won_cup: false
 )
 
+sleep(1)
+print "."
+
 Team.create!(
     name: "Boston Bruins",
     season_wins: 41,
     playoff_eligible: true
 )
+
+sleep(1)
+print "."
 
 Player.create!(
     team_id: 2,
@@ -50,12 +67,18 @@ Player.create!(
     won_cup: true
 )
 
+sleep(1)
+print "."
+
 Player.create!(
     team_id: 2,
     name: "Pat Maroon",
     jersey_number: 61,
     won_cup: true
 )
+
+sleep(1)
+print "."
 
 Player.create!(
     team_id: 2,
@@ -64,11 +87,17 @@ Player.create!(
     won_cup: false
 )
 
+sleep(1)
+print "."
+
 Team.create!(
     name: "Carolina Hurricanes",
     season_wins: 43,
     playoff_eligible: true
 )
+
+sleep(1)
+print "."
 
 Player.create!(
     team_id: 3,
@@ -77,6 +106,9 @@ Player.create!(
     won_cup: false
 )
 
+sleep(1)
+print "."
+
 Player.create!(
     team_id: 3,
     name: "Jordan Staal",
@@ -84,11 +116,17 @@ Player.create!(
     won_cup: true
 )
 
+sleep(1)
+print "."
+
 Player.create!(
     team_id: 3,
     name: "Brent Burns",
     jersey_number: 8,
     won_cup: false
 )
+
+sleep(1)
+print "."
 
 puts "Seeded Successfully."
