@@ -3,6 +3,7 @@
 <% @teams.each do |team| %>
 
     <p> <%= link_to team.name, "/teams/#{team.id}" %> </p>
+    <p> <%= team.created_at %> </p>
 
 <% end %>
 

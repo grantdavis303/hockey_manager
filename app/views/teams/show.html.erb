@@ -1,7 +1,8 @@
 <h1> <%= @team.name %> </h1>
 
+<p><a href="/teams/<%= @team.id %>/players"> Current Players </a></p>
+<p> Current Player Count: <%= @team.players.count %> </p>
 <p> Current Season Wins: <%= @team.season_wins %> </p>
-
 <p> Eligible for this year's playoffs? 
     <%= 
 if @team.playoff_eligible == true
