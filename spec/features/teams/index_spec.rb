@@ -29,7 +29,7 @@ RSpec.describe "teams index page", type: :feature do
         end
     end
 
-    # User Story 8
+    # User Story 9
     describe 'all pages have link to teams index' do
         it 'all pages have link to teams index' do
             visit '/'
@@ -44,6 +44,26 @@ RSpec.describe "teams index page", type: :feature do
 
             expect(page).to have_link(href: "/players")
         end
+
+        # User Story 11
+        it 'new teams can be created' do
+            visit '/teams'
+            click_button "New Team"
+                   
+            expect(current_path).to eq("/teams/new")
+
+            fill_in 'title', with: 'Las Vegas Golden Knights'
+            fill_in 'wins', with: 38
+            choose "yes"
+
+            click_button "Create Team"
+
+            # binding.pry
+            # save_and_open_page
+
+            expect(current_path).to eq("/teams")
+        end
+
     end
 
 end
