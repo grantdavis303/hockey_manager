@@ -1,0 +1,21 @@
+<h1> Edit Team </h1>
+
+<form action="/teams/<%= @team.id %>" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="hidden" name="_method" value="PATCH" />
+
+    <p> Enter the team name: </p>
+        <input type='text' name='title' value="<%= @team.name %>"/><br/>
+
+    <p> Enter the season wins: </p>
+        <input type='text' name='wins' value="<%= @team.season_wins %>"/><br/>
+
+    <p> Is the team playoff eligible? </p>
+        <input type='radio' id="yes" name="playoff_eligible" value="true">
+        <label for="yes"/>Yes</label><br>
+        <input type='radio' id="no" name="playoff_eligible" value="false">
+        <label for="no"/>No</label><br>
+
+    <br>
+    <input type='submit' value="Update Team"/>
+</form>

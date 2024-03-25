@@ -10,9 +10,23 @@ class TeamsController < ApplicationController
         @team = Team.find(params[:id])
     end
 
-    def create
-        #binding.pry
-        
+    def edit
+        @team = Team.find(params[:id])
+    end
+
+    def update
+        team = Team.find(params[:id])
+        team.update({
+            name: params[:title],
+            season_wins: params[:wins],
+            playoff_eligible: params[:playoff_eligible]
+        })
+
+        team.save
+        redirect_to "/teams/#{team.id}"
+    end
+
+    def create        
         team = Team.new({
             name: params[:title],
             season_wins: params[:wins].to_i,
