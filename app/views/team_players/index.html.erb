@@ -1,7 +1,9 @@
 <h1> <%= @team.name %> Players </h1>
 
+<form action="">
+    <input type="submit" value="Create Player">
+</form>
+
 <% @players.each do |player| %>
     <p> <%= player.name%> </p>
 <% end %>
-
-<p> <a href="./">Back</a> </p>

@@ -1,9 +1,7 @@
 <h1> Players Index </h1>
 
 <% @players.each do |player| %>
-
-    <p> <%= link_to player.name, "/players/#{player.id}" %> </p>
-
+    <% if player.won_cup == true%>
+       <p> <%= link_to player.name, "/players/#{player.id}" %> </p>
+    <% end %>
 <% end %>
-
-<p> <a href="../">Back</a> </p>
