@@ -55,13 +55,34 @@ RSpec.describe "teams index page", type: :feature do
             fill_in 'title', with: 'Las Vegas Golden Knights'
             fill_in 'wins', with: 38
             choose "yes"
-
             click_button "Create Team"
 
             # binding.pry
             # save_and_open_page
 
             expect(current_path).to eq("/teams")
+            expect(page).to have_content("Las Vegas Golden Knights")
+
+        end
+
+        # User Story 12
+        it 'current teams can be updated' do
+            Team.create!(name: "Colorado Avalanche", season_wins: 44, playoff_eligible: true)
+
+            visit '/teams'
+            click_link "Colorado Avalanche"
+            click_button "Update Team"
+            fill_in 'title', with: 'San Jose Sharks'
+            fill_in 'wins', with: 16
+            choose "no"
+            click_button "Update Team"
+
+            # binding.pry
+            # save_and_open_page
+
+            expect(page).to have_content("San Jose Sharks")
+            expect(page).to have_content("16")
+            expect(page).to have_content("Unfortunately not this year.")
         end
 
     end
