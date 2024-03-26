@@ -5,6 +5,13 @@ RSpec.describe Player, type: :model do
     it {should belong_to :team}
 
     describe 'player has attributes' do
+        it 'player exists' do
+            test_team = Team.create!(name: "Colorado Avalanche", season_wins: 44, playoff_eligible: true)
+            test_team.players.create!(team_id: 1, name: "Nathan MacKinnon", jersey_number: 29, won_cup: true)
+
+            expect(test_team.players[0]).to be_a (Player)
+        end
+
         it 'player has a name' do
             test_team = Team.create!(name: "Colorado Avalanche", season_wins: 44, playoff_eligible: true)
             test_team.players.create!(team_id: 1, name: "Nathan MacKinnon", jersey_number: 29, won_cup: true)
