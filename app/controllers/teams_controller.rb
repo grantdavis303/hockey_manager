@@ -14,6 +14,17 @@ class TeamsController < ApplicationController
         @team = Team.find(params[:id])
     end
 
+    def destroy
+        team = Team.find(params[:id])
+        whole_team = team.players
+        whole_team.each do |player|
+            player.destroy
+        end
+
+        team.destroy
+        redirect_to "/teams"
+    end
+
     def update
         team = Team.find(params[:id])
         team.update({

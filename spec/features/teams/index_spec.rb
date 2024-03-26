@@ -79,6 +79,16 @@ RSpec.describe "teams index page", type: :feature do
             expect(page).to have_content("Unfortunately not this year.")
         end
 
+        # User Story 19
+        it 'current teams can be destroyed' do
+            Team.create!(name: "Colorado Avalanche", season_wins: 44, playoff_eligible: true)
+
+            visit '/teams'
+            click_link "Colorado Avalanche"
+            click_button "Delete Team"
+
+            expect(current_path).not_to have_content("Colorado Avalanche")
+        end
     end
 
 end
