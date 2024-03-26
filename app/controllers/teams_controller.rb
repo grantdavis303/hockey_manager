@@ -28,8 +28,8 @@ class TeamsController < ApplicationController
     def update
         team = Team.find(params[:id])
         team.update({
-            name: params[:title],
-            season_wins: params[:wins],
+            name: params[:team_name],
+            season_wins: params[:season_wins],
             playoff_eligible: params[:playoff_eligible]
         })
 
@@ -39,8 +39,8 @@ class TeamsController < ApplicationController
 
     def create        
         team = Team.new({
-            name: params[:title],
-            season_wins: params[:wins].to_i,
+            name: params[:team_name],
+            season_wins: params[:season_wins].to_i,
             playoff_eligible: check_bool(params[:playoff_eligible])
         })
 

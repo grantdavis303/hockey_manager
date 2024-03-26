@@ -1,0 +1,21 @@
+<h1> Edit Player </h1>
+
+<form action="/players/<%= @player.id %>" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="hidden" name="_method" value="PATCH" />
+
+    <p> Enter the player name: </p>
+        <input type='text' name='player_name' value="<%= @player.name %>"/><br/>
+    
+    <p> Enter the player's jersey_number: </p>
+        <input type='text' name='jersey_number' value="<%= @player.jersey_number %>"/><br/>
+
+    <p> Has this player ever won a Stanley Cup? </p>
+        <input type='radio' id="yes" name="won_cup" value="true">
+        <label for="yes"/>Yes</label><br>
+        <input type='radio' id="no" name="won_cup" value="false">
+        <label for="no"/>No</label><br>
+    
+    <br>
+    <input type='submit' value="Update Player"/>
+</form>

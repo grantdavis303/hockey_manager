@@ -1,13 +1,11 @@
 <h1> <%= @team.name %> Players </h1>
 
-<!--
-<form action="">
-    <input type="submit" value="Create Player">
-</form>
--->
-
 <% @players.each do |player| %>
 
     <p> <%= link_to player.name, "/players/#{player.id}" %> </p>
+
+    <form action="/players/<%= player.id %>/edit" method="GET" style="display: inline-block;">
+        <input type="submit" value="Update <%= player.name %>">
+    </form>
 
 <% end %>

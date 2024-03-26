@@ -49,8 +49,8 @@ RSpec.describe "teams index page", type: :feature do
                 
         expect(current_path).to eq("/teams/new")
 
-        fill_in 'title', with: 'Las Vegas Golden Knights'
-        fill_in 'wins', with: 38
+        fill_in 'team_name', with: 'Las Vegas Golden Knights'
+        fill_in 'season_wins', with: 38
         choose "yes"
         click_button "Create Team"
 
@@ -66,8 +66,8 @@ RSpec.describe "teams index page", type: :feature do
         visit '/teams'
         click_link "Colorado Avalanche"
         click_button "Update Team"
-        fill_in 'title', with: 'San Jose Sharks'
-        fill_in 'wins', with: 16
+        fill_in 'team_name', with: 'San Jose Sharks'
+        fill_in 'season_wins', with: 16
         choose "no"
         click_button "Update Team"
 
