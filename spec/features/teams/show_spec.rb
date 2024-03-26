@@ -51,7 +51,6 @@ RSpec.describe "teams show page", type: :feature do
             
             visit "/teams/#{team.id}"
 
-            #expect(page).to have_link(href: "/teams/#{team.id}/players")
             expect(page).to have_button("Colorado Avalanche Players")
         end  
     end

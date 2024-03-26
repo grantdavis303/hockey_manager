@@ -57,9 +57,6 @@ RSpec.describe "teams index page", type: :feature do
             choose "yes"
             click_button "Create Team"
 
-            # binding.pry
-            # save_and_open_page
-
             expect(current_path).to eq("/teams")
             expect(page).to have_content("Las Vegas Golden Knights")
 
