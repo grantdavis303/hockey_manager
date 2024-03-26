@@ -1,10 +1,14 @@
 <h1> Players Index </h1>
 
+<br>
+
 <% @players.each do |player| %>
     <% if player.won_cup == true%>
-       <p> <%= link_to player.name, "/players/#{player.id}" %> </p>
+       <h3> <%= link_to player.name, "/players/#{player.id}" %> </h3>
         <form action="/players/<%= player.id %>/edit" method="GET" style="display: inline-block;">
             <input type="submit" value="Update <%= player.name %>">
         </form>
     <% end %>
 <% end %>
+
+<p> Notice anything special about these players? </p>

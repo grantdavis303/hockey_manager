@@ -4,12 +4,14 @@
     <input type="submit" value="New Team">
 </form>
 
+<br>
+
 <% @teams.each do |team| %>
 
-    <p> <%= link_to team.name, "/teams/#{team.id}" %> </p>
+    <h3> <%= link_to team.name, "/teams/#{team.id}" %> </h3>
     <p> <%= team.created_at %> </p>
     <form action="/teams/<%= team.id %>/edit" method="GET" style="display: inline-block;">
-        <input type="submit" value="Update <%= team.name %>">
+        <input type="submit" value="Update Team">
     </form>
 
 <% end %>

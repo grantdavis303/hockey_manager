@@ -89,14 +89,10 @@ RSpec.describe "teams index page", type: :feature do
 
     it 'teams index page has update teams links next to each team' do
         Team.create!(name: "Colorado Avalanche", season_wins: 44, playoff_eligible: true)
-        Team.create!(name: "Boston Bruins", season_wins: 41, playoff_eligible: true)
-        Team.create!(name: "Carolina Hurricanes", season_wins: 43, playoff_eligible: true)
 
         visit '/teams'
 
-        expect(page).to have_button("Update Colorado Avalanche")
-        expect(page).to have_button("Update Boston Bruins")
-        expect(page).to have_button("Update Carolina Hurricanes")
+        expect(page).to have_button("Update Team")
     end
 
 end
