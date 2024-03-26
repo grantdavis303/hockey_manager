@@ -11,23 +11,28 @@ Rails.application.routes.draw do
     get "/", to: "welcome#index"
 
     get "/teams", to: "teams#index"
-    get "/teams/new", to: "teams#new"    
-    post "/teams", to: "teams#create"
+    get "/teams/new", to: "teams#new" 
     get "/teams/:id", to: "teams#show"
+    post "/teams", to: "teams#create"
+    get "/teams/:id/edit", to: "teams#edit"
+    patch "/teams/:id", to: "teams#update"
+    delete "/teams/:id", to: "teams#destroy"
 
     get "/teams/:id/players", to: "team_players#index"
     get "/teams/:id/players/new", to: "team_players#new"
     post "/teams/:id/players", to: "team_players#create"
 
-    get "/teams/:id/edit", to: "teams#edit"
-    patch "/teams/:id", to: "teams#update"
-    delete "/teams/:id", to: "teams#destroy"
-
     get "/players", to: "players#index"
     get "/players/new", to: "team_players#new"
+    get "/players/:id", to: "players#show"    
     post "/players", to: "team_players#create"
-    get "/players/:id", to: "players#show"
     get "/players/:id/edit", to: "team_players#edit"
+
+
+
     patch "/players/:id", to: "team_players#update"
     delete "/players/:id", to: "players#destroy"
+
 end
+
+#/teams/:id/players/new
