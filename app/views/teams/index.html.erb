@@ -10,8 +10,13 @@
 
     <h3> <%= link_to team.name, "/teams/#{team.id}" %> </h3>
     <p> <%= team.created_at %> </p>
+
     <form action="/teams/<%= team.id %>/edit" method="GET" style="display: inline-block;">
         <input type="submit" value="Update Team">
     </form>
+
+    <form action="/teams/<%= team.id %>" method="DELETE" style="display: inline-block;">
+        <input type="submit" value="Delete Team">
+    </form> 
 
 <% end %>
