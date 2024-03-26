@@ -21,4 +21,5 @@ Rails.application.routes.draw do
 
     get "/players", to: "players#index"
     get "/players/:id", to: "players#show"
+    delete "/players/:id", to: "players#destroy"
 end

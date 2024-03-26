@@ -11,3 +11,7 @@ if @player.won_cup == true
 else
     "Unfortunately not."
 end %> </p>
+
+<form action="/players/<%= @player.id %>" method="DELETE">
+    <input type="submit" value="Delete Player">
+</form>
