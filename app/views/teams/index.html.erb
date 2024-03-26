@@ -9,4 +9,8 @@
     <p> <%= link_to team.name, "/teams/#{team.id}" %> </p>
     <p> <%= team.created_at %> </p>
 
+    <form action="/teams/<%= team.id %>/edit" method="GET" style="display: inline-block;">
+        <input type="submit" value="Update <%= team.name %>">
+    </form>
+
 <% end %>
