@@ -8,12 +8,7 @@
 
 <p> Current Player Count: <%= @team.players.count %> </p>
 <p> Current Season Wins: <%= @team.season_wins %> </p>
-<p> Eligible for this year's playoffs? <%= 
-if @team.playoff_eligible == true
-    "Yes!"
-else
-    "Unfortunately not this year."
-end %> </p>
+<p> Eligible for this year's playoffs? <%= @team.is_playoff_eligible(@team.playoff_eligible) %> </p>
 
 <form action="/teams/<%= @team.id %>/edit" method="GET" style="display: inline-block;">
     <input type="submit" value="Update Team">

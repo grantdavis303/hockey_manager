@@ -28,10 +28,9 @@ RSpec.describe "players show page", type: :feature do
             
             visit "/players/#{team.players[0].id}"
             
-            expect(page).to have_content("Yes!")
+            expect(page).to have_content("Has previously won a Stanley Cup? Yes!")
         end        
     end
-
 
     # User Story 14
     it 'player show page has update player button' do
@@ -44,11 +43,13 @@ RSpec.describe "players show page", type: :feature do
 
         click_button "Update Player"
         fill_in 'player_name', with: 'Grant Davis'
-        fill_in 'jersey_number', with: 0
+        fill_in 'jersey_number', with: "0"
         choose "no"
         click_button "Update Player"
 
         expect(page).to have_content("Grant Davis")
+        expect(page).to have_content("Jersey Number: 0")
+        expect(page).to have_content("Has previously won a Stanley Cup? Unfortunately not.")
         expect(current_path).to eq("/players/#{team.players[0].id}")
     end
 

@@ -7,13 +7,14 @@ RSpec.describe "players index page", type: :feature do
         team = Team.create!(name: "Colorado Avalanche", season_wins: 44, playoff_eligible: true)
         team.players.create!(name: "Nathan MacKinnon", jersey_number: 29, won_cup: true)
         team.players.create!(name: "Mikko Rantanen", jersey_number: 96, won_cup: true)
-        team.players.create!(name: "Casey Mittelstadt", jersey_number: 37, won_cup: false)
 
         visit '/players'
         
         expect(page).to have_content(team.players[0].name)
+        expect(page).to have_content(team.players[0].jersey_number)
         expect(page).to have_content(team.players[1].name)
-        #expect(page).to have_content(team.players[2].name)
+        expect(page).to have_content(team.players[1].jersey_number)
+        expect(page).to have_content("Yes!")
     end        
 
     # User Story 8
@@ -29,6 +30,17 @@ RSpec.describe "players index page", type: :feature do
         visit '/teams'
 
         expect(page).to have_link(href: "/players")
+    end
+
+    # User Story 15
+    it 'current players can be updated in the players index page' do
+        team = Team.create!(name: "Colorado Avalanche", season_wins: 44, playoff_eligible: true)
+        team.players.create!(name: "Nathan MacKinnon", jersey_number: 29, won_cup: true)
+        team.players.create!(name: "Mikko Rantanen", jersey_number: 96, won_cup: true)
+
+        visit '/players'
+
+        expect(page).not_to have_content("Has won a Stanley Cup? Unfortunately not.")
     end
 
     # User Story 18 P1

@@ -11,8 +11,11 @@ RSpec.describe "teams index page", type: :feature do
         visit '/teams'
         
         expect(page).to have_content(team_1.name)
+        expect(page).to have_content(team_1.created_at)
         expect(page).to have_content(team_2.name)
+        expect(page).to have_content(team_2.created_at)
         expect(page).to have_content(team_3.name)
+        expect(page).to have_content(team_3.created_at)
     end
 
     # User Story 6
@@ -73,7 +76,7 @@ RSpec.describe "teams index page", type: :feature do
 
         expect(page).to have_content("San Jose Sharks")
         expect(page).to have_content("16")
-        expect(page).to have_content("Unfortunately not this year.")
+        expect(page).to have_content("Unfortunately not.")
     end
 
     # User Story 19

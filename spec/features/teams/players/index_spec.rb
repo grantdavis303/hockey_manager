@@ -28,7 +28,26 @@ RSpec.describe "teams players index page", type: :feature do
             expect(team.players[2].name).to appear_before(team.players[1].name)
             expect(team.players[1].name).to appear_before(team.players[0].name)
         end
+    end
 
+    # User Story 13
+    describe 'has additional features' do
+        it 'new players can be created' do
+            Team.create!(name: "Colorado Avalanche", season_wins: 44, playoff_eligible: true)
+            
+            visit '/teams'
+            click_link "Colorado Avalanche"
+            click_button "Colorado Avalanche Players"
+            click_button "New Player"
+            fill_in "player_name", with: "Grant Davis" 
+            fill_in "jersey_number", with: "17"
+            choose "no"
+            click_button "Create Player"
+
+            expect(page).to have_content("Grant Davis")
+            expect(page).to have_content("17")
+            expect(page).to have_content("Unfortunately not.")
+        end
     end
 
 end
