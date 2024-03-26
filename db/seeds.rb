@@ -15,7 +15,7 @@ puts "Seeding"
 
 print "Creating Teams"
 
-    Team.create!(name: "Colorado Avalanche", season_wins: 44, playoff_eligible: true)
+    Team.create!(name: "Colorado Avalanche", season_wins: 46, playoff_eligible: true)
     sleep(0.5)
     print "."
 
@@ -23,7 +23,19 @@ print "Creating Teams"
     sleep(0.5)
     print "."
 
-    Team.create!(name: "Carolina Hurricanes", season_wins: 43, playoff_eligible: true)
+    Team.create!(name: "Carolina Hurricanes", season_wins: 45, playoff_eligible: true)
+    sleep(0.5)
+    print "."
+
+    Team.create!(name: "San Jose Sharks", season_wins: 16, playoff_eligible: false)
+    sleep(0.5)
+    print "."
+
+    Team.create!(name: "Chicago Blackhawks", season_wins: 20, playoff_eligible: false)
+    sleep(0.5)
+    print "."
+
+    Team.create!(name: "Anaheim Ducks", season_wins: 24, playoff_eligible: false)
     sleep(0.5)
     print "."
 
@@ -64,6 +76,42 @@ print "Creating Players"
     print "."
 
     Player.create!(team_id: 3, name: "Brent Burns", jersey_number: 8, won_cup: false)
+    sleep(0.5)
+    print "."
+
+    Player.create!(team_id: 4, name: "Justin Bailey", jersey_number: 90, won_cup: false)
+    sleep(0.5)
+    print "."
+
+    Player.create!(team_id: 4, name: "Ryan Carpenter", jersey_number: 22, won_cup: false)
+    sleep(0.5)
+    print "."
+
+    Player.create!(team_id: 4, name: "Logan Couture", jersey_number: 39, won_cup: false)
+    sleep(0.5)
+    print "."
+
+    Player.create!(team_id: 5, name: "Connor Bedard", jersey_number: 98, won_cup: false)
+    sleep(0.5)
+    print "."
+
+    Player.create!(team_id: 5, name: "Tyler Johnson", jersey_number: 90, won_cup: true)
+    sleep(0.5)
+    print "."
+
+    Player.create!(team_id: 5, name: "Nick Foligno", jersey_number: 17, won_cup: false)
+    sleep(0.5)
+    print "."
+
+    Player.create!(team_id: 6, name: "Leo Carlsson", jersey_number: 91, won_cup: false)
+    sleep(0.5)
+    print "."
+
+    Player.create!(team_id: 6, name: "Trevor Zegras", jersey_number: 11, won_cup: false)
+    sleep(0.5)
+    print "."
+
+    Player.create!(team_id: 6, name: "Radko Gudas", jersey_number: 7, won_cup: false)
     sleep(0.5)
     print "."
 
