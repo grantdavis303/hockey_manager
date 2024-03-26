@@ -1,0 +1,20 @@
+<h1> New Player Record </h1>
+
+<form action="/teams/:id/players" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+    <p> Enter the player name: </p>
+        <input type='text' name='player_name'/><br/>
+
+    <p> Enter the player's jersey number: </p>
+        <input type='text' name='jersey_number'/><br/>
+
+    <p> Has the player previously won a Stanley Cup? </p>
+        <input type='radio' id="yes" name="won_cup" value="true">
+        <label for="yes"/>Yes</label><br>
+        <input type='radio' id="no" name="won_cup" value="false">
+        <label for="no"/>No</label><br>
+    
+    <br>
+    <input type='submit' value="Create Player"/>
+</form>

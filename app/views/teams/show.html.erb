@@ -10,4 +10,6 @@ else
     "Unfortunately not this year."
 end %> </p>
 
-<p><a href="/teams/<%= @team.id %>/edit"> Update Team </a></p>
+<form action="/teams/<%= @team.id %>/edit">
+    <input type="submit" value="Update Team">
+</form>

@@ -77,9 +77,6 @@ RSpec.describe "teams index page", type: :feature do
             choose "no"
             click_button "Update Team"
 
-            # binding.pry
-            # save_and_open_page
-
             expect(page).to have_content("San Jose Sharks")
             expect(page).to have_content("16")
             expect(page).to have_content("Unfortunately not this year.")
