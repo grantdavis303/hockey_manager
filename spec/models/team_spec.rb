@@ -32,4 +32,19 @@ RSpec.describe Team, type: :model do
         end 
     end
 
+    describe 'additional team methods' do
+        it '#is_playoff_eligible' do
+            test_team_1 = Team.create!(name: "Colorado Avalanche", season_wins: 44, playoff_eligible: true)
+            test_team_2 = Team.create!(name: "San Jose Sharks", season_wins: 18, playoff_eligible: false)
+
+            returned_value = test_team_1.is_playoff_eligible(test_team_1.playoff_eligible)
+
+            expect(returned_value).to eq ("Yes!")
+
+            returned_value = test_team_2.is_playoff_eligible(test_team_2.playoff_eligible)
+
+            expect(returned_value).to eq ("Unfortunately not.")
+        end 
+    end
+
 end

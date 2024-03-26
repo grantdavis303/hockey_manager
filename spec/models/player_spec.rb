@@ -36,4 +36,15 @@ RSpec.describe Player, type: :model do
         end 
     end
 
+    describe 'additional player methods' do
+        it '#is_a_champion' do
+            test_team = Team.create!(name: "Colorado Avalanche", season_wins: 44, playoff_eligible: true)
+            player = test_team.players.create!(team_id: 1, name: "Nathan MacKinnon", jersey_number: 29, won_cup: true)          
+
+            returned_value = player.is_a_champion(player.won_cup)
+
+            expect(returned_value).to eq ("Yes!")
+
+        end 
+    end
 end
