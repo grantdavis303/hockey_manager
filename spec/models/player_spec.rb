@@ -44,7 +44,6 @@ RSpec.describe Player, type: :model do
             returned_value = player.is_a_champion(player.won_cup)
 
             expect(returned_value).to eq ("Yes!")
-
-        end 
+        end
     end
 end

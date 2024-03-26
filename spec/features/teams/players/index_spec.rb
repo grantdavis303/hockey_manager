@@ -24,6 +24,7 @@ RSpec.describe "teams players index page", type: :feature do
             team.players.create!(name: "Casey Mittelstadt", jersey_number: 37, won_cup: false)
             
             visit "/teams/#{team.id}/players"
+            click_link "Sort Players"
             
             expect(team.players[2].name).to appear_before(team.players[1].name)
             expect(team.players[1].name).to appear_before(team.players[0].name)

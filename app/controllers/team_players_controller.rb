@@ -1,29 +1,17 @@
 class TeamPlayersController < ApplicationController
     def index
         @team = Team.find(params[:id])
-        @players = @team.players.order(name: :asc)
+        
+        if params[:sort] == "true"
+            @players = @team.players.order(name: :asc)
+        else
+            @players = @team.players
+        end
     end
 
     def new
         @team = Team.find(params[:id])
     end
-
-    # def edit
-    #     @player = Player.find(params[:id])
-    # end
-
-    # def update
-    #     player = Player.find(params[:id])
-
-    #     player.update({
-    #         name: params[:player_name],
-    #         jersey_number: params[:jersey_number],
-    #         won_cup: params[:won_cup]
-    #     })
-
-    #     player.save
-    #     redirect_to "/players/#{player.id}"
-    # end
 
     def create
         player = Player.new({
@@ -40,5 +28,4 @@ class TeamPlayersController < ApplicationController
     def check_bool(form_response)
         form_response == "true"
     end
-
 end

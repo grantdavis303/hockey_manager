@@ -16,11 +16,7 @@ class TeamsController < ApplicationController
 
     def destroy
         team = Team.find(params[:id])
-        whole_team = team.players
-        whole_team.each do |player|
-            player.destroy
-        end
-
+        team.players.destroy_all
         team.destroy
         redirect_to "/teams"
     end

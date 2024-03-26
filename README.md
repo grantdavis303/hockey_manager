@@ -1,6 +1,6 @@
 # Grant's Hockey Manager
 
-Hello! Welcome to my hockey manager web application. This is a simple web application that allows you to search through different hockey teams and players.
+Hello! Welcome to my hockey manager web application. This is a very simple web application that allows you to search through different hockey teams and their players, add to them, or delete them - whatever you want to do! It's practically the wild west out here.
 
 ## Requirements
 
