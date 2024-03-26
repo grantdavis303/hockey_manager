@@ -25,7 +25,7 @@ RSpec.describe "teams show page", type: :feature do
             
             visit "/teams/#{team.id}"
             
-            expect(page).to have_content("Yes!" || "Unfortunately not this year.") # EDIT LATER
+            expect(page).to have_content("Yes!")
         end        
     end
 

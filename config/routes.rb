@@ -14,7 +14,10 @@ Rails.application.routes.draw do
     get "/teams/new", to: "teams#new"    
     post "/teams", to: "teams#create"
     get "/teams/:id", to: "teams#show"
+
     get "/teams/:id/players", to: "team_players#index"
+    get "/teams/:id/players/new", to: "team_players#new"
+    post "/teams/:id/players", to: "team_players#create"
 
     get "/teams/:id/edit", to: "teams#edit"
     patch "/teams/:id", to: "teams#update"
@@ -24,7 +27,6 @@ Rails.application.routes.draw do
     get "/players/new", to: "team_players#new"
     post "/players", to: "team_players#create"
     get "/players/:id", to: "players#show"
-
     get "/players/:id/edit", to: "team_players#edit"
     patch "/players/:id", to: "team_players#update"
     delete "/players/:id", to: "players#destroy"

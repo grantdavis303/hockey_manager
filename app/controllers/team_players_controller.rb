@@ -32,7 +32,7 @@ class TeamPlayersController < ApplicationController
         })
 
         player.save
-        redirect_to "/players"
+        redirect_to "/teams/:id/players"
     end
 
     def check_bool(form_response)

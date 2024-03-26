@@ -10,6 +10,10 @@ else
     "Unfortunately not."
 end %> </p>
 
-<form action="/players/<%= @player.id %>" method="DELETE">
+<form action="/players/<%= @player.id %>/edit" method="GET" style="display: inline-block;">
+    <input type="submit" value="Update Player">
+</form>
+
+<form action="/players/<%= @player.id %>" method="DELETE" style="display: inline-block;">
     <input type="submit" value="Delete Player">
 </form>
