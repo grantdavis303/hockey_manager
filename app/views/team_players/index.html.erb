@@ -6,12 +6,6 @@
 
 <%= link_to "Sort Players", "/teams/#{@team.id}/players?sort=true", method: :get %>
 
-<!--
-<form action="/teams/<%= @team.id %>/players?sort=true" style="display: inline-block;">
-    <input type="submit" value="Sort Players">
-</form>
--->
-
 <br>
 
 <% @players.each do |player| %>
