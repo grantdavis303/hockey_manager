@@ -79,8 +79,21 @@ RSpec.describe "teams index page", type: :feature do
         expect(page).to have_content("Unfortunately not.")
     end
 
+    # User Story 17
+    it 'teams index page has update teams links next to each team' do
+        team = Team.create!(name: "Colorado Avalanche", season_wins: 44, playoff_eligible: true)
+
+        visit '/teams'
+
+        expect(page).to have_button("Update Team")
+
+        click_button "Update Team"
+
+        expect(current_path).to eq("/teams/#{team.id}/edit")
+    end
+
     # User Story 19
-    it 'current teams can be destroyed' do
+    it 'current teams can be destroyed from the show page' do
         Team.create!(name: "Colorado Avalanche", season_wins: 44, playoff_eligible: true)
 
         visit '/teams'
@@ -90,12 +103,14 @@ RSpec.describe "teams index page", type: :feature do
         expect(current_path).not_to have_content("Colorado Avalanche")
     end
 
-    it 'teams index page has update teams links next to each team' do
+    # User Story 22
+    it 'current teams can be destroyed from the index page' do
         Team.create!(name: "Colorado Avalanche", season_wins: 44, playoff_eligible: true)
 
         visit '/teams'
+        click_button "Delete Team"
 
-        expect(page).to have_button("Update Team")
+        expect(current_path).not_to have_content("Colorado Avalanche")
     end
 
 end

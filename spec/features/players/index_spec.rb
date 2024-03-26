@@ -76,7 +76,7 @@ RSpec.describe "players index page", type: :feature do
     end
 
     # User Story 20
-    it 'current players can be destroyed' do
+    it 'current players can be destroyed from the show page' do
         team = Team.create!(name: "Colorado Avalanche", season_wins: 44, playoff_eligible: true)
         team.players.create!(name: "Nathan MacKinnon", jersey_number: 29, won_cup: true)
         team.players.create!(name: "Mikko Rantanen", jersey_number: 96, won_cup: true)
@@ -84,6 +84,17 @@ RSpec.describe "players index page", type: :feature do
 
         visit '/players'
         click_link "Nathan MacKinnon"
+        click_button "Delete Player"
+
+        expect(current_path).not_to have_content("Nathan MacKinnon")
+    end
+
+    # User Story 23
+    it 'current players can be destroyed from the index page' do
+        team = Team.create!(name: "Colorado Avalanche", season_wins: 44, playoff_eligible: true)
+        team.players.create!(name: "Nathan MacKinnon", jersey_number: 29, won_cup: true)
+        
+        visit '/players'
         click_button "Delete Player"
 
         expect(current_path).not_to have_content("Nathan MacKinnon")
