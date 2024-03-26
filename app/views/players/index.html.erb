@@ -1,22 +1,20 @@
 <h1> Players Index </h1>
 
-<br>
-
 <% if @players.count > 0 %>
+    <br>
     <% @players.each do |player| %>
         <% if player.won_cup == true %>
         <h3> <%= link_to player.name, "/players/#{player.id}" %> </h3>
+        <form action="/players/<%= player.id %>/edit" method="GET" style="display: inline-block;">
+            <input type="submit" value="Update Player">
+        </form>
 
-            <form action="/players/<%= player.id %>/edit" method="GET" style="display: inline-block;">
-                <input type="submit" value="Update <%= player.name %>">
-            </form>
-
-            <form action="/players/<%= player.id %>" method="DELETE" style="display: inline-block;">
-                <input type="submit" value="Delete Player">
-            </form> 
+        <form action="/players/<%= player.id %>" method="DELETE" style="display: inline-block;">
+            <input type="submit" value="Delete Player">
+        </form> 
         <% end %>
     <% end %>
-    <p> Notice anything special about these player(s)? </p>    
+    <p> Notice anything special about the player(s) above? </p>    
 <% else %>
-    <p> Oh no! There are no current players. </p>
+    <p> Oh no! There are no players. </p>
 <% end %>

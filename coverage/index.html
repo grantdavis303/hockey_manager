@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2024-03-26T09:07:15-06:00">2024-03-26T09:07:15-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2024-03-26T10:27:14-06:00">2024-03-26T10:27:14-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -106,7 +106,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#01b0e5cc320dc0ae3ec3a34262e0a18e3082462d" class="src_link" title="app/controllers/teams_controller.rb">app/controllers/teams_controller.rb</a></td>
             <td class="red strong cell--number t-file__coverage">76.92 %</td>
-            <td class="cell--number">55</td>
+            <td class="cell--number">57</td>
             <td class="cell--number">26</td>
             <td class="cell--number">20</td>
             <td class="cell--number">6</td>
@@ -1247,7 +1247,7 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -1258,18 +1258,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">        #binding.pry</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="6">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="6">
+            
             
 
             
 
-            <code class="ruby">    def new</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -1280,12 +1280,34 @@
 
             
 
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="8">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    def new</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="9">
+            
+            
+
+            
+
             <code class="ruby">    end</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="8">
+          <li class="never" data-hits="" data-linenumber="10">
             
             
 
@@ -1296,7 +1318,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="9">
+          <li class="covered" data-hits="1" data-linenumber="11">
             <span class="hits">1</span>
             
 
@@ -1307,7 +1329,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="9" data-linenumber="10">
+          <li class="covered" data-hits="9" data-linenumber="12">
             <span class="hits">9</span>
             
 
@@ -1318,7 +1340,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="11">
+          <li class="never" data-hits="" data-linenumber="13">
             
             
 
@@ -1329,7 +1351,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="12">
+          <li class="never" data-hits="" data-linenumber="14">
             
             
 
@@ -1340,7 +1362,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="13">
+          <li class="covered" data-hits="1" data-linenumber="15">
             <span class="hits">1</span>
             
 
@@ -1351,7 +1373,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="14">
+          <li class="covered" data-hits="1" data-linenumber="16">
             <span class="hits">1</span>
             
 
@@ -1362,7 +1384,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="15">
+          <li class="never" data-hits="" data-linenumber="17">
             
             
 
@@ -1373,7 +1395,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="16">
+          <li class="never" data-hits="" data-linenumber="18">
             
             
 
@@ -1384,7 +1406,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="17">
+          <li class="covered" data-hits="1" data-linenumber="19">
             <span class="hits">1</span>
             
 
@@ -1395,35 +1417,13 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="18">
-            
-            
-
-            
-
-            <code class="ruby">        team = Team.find(params[:id])</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="19">
-            
-            
-
-            
-
-            <code class="ruby">        whole_team = team.players</code>
-          </li>
-        </div>
-      
-        <div>
           <li class="missed" data-hits="0" data-linenumber="20">
             
             
 
             
 
-            <code class="ruby">        whole_team.each do |player|</code>
+            <code class="ruby">        team = Team.find(params[:id])</code>
           </li>
         </div>
       
@@ -1434,12 +1434,34 @@
 
             
 
+            <code class="ruby">        whole_team = team.players</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="22">
+            
+            
+
+            
+
+            <code class="ruby">        whole_team.each do |player|</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="23">
+            
+            
+
+            
+
             <code class="ruby">            player.destroy</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="22">
+          <li class="never" data-hits="" data-linenumber="24">
             
             
 
@@ -1450,7 +1472,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="23">
+          <li class="never" data-hits="" data-linenumber="25">
             
             
 
@@ -1461,7 +1483,7 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="24">
+          <li class="missed" data-hits="0" data-linenumber="26">
             
             
 
@@ -1472,7 +1494,7 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="25">
+          <li class="missed" data-hits="0" data-linenumber="27">
             
             
 
@@ -1483,7 +1505,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="26">
+          <li class="never" data-hits="" data-linenumber="28">
             
             
 
@@ -1494,35 +1516,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="27">
+          <li class="never" data-hits="" data-linenumber="29">
             
             
 
             
 
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="28">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    def update</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="29">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        team = Team.find(params[:id])</code>
           </li>
         </div>
       
@@ -1533,29 +1533,29 @@
 
             
 
+            <code class="ruby">    def update</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="31">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        team = Team.find(params[:id])</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="32">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">        team.update({</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="31">
-            
-            
-
-            
-
-            <code class="ruby">            name: params[:team_name],</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="32">
-            
-            
-
-            
-
-            <code class="ruby">            season_wins: params[:season_wins],</code>
           </li>
         </div>
       
@@ -1566,7 +1566,7 @@
 
             
 
-            <code class="ruby">            playoff_eligible: params[:playoff_eligible]</code>
+            <code class="ruby">            name: params[:team_name],</code>
           </li>
         </div>
       
@@ -1577,7 +1577,7 @@
 
             
 
-            <code class="ruby">        })</code>
+            <code class="ruby">            season_wins: params[:season_wins],</code>
           </li>
         </div>
       
@@ -1588,111 +1588,12 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">            playoff_eligible: params[:playoff_eligible]</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="36">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        team.save</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="37">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        redirect_to &quot;/teams/#{team.id}&quot;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="38">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="39">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="40">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    def create        </code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="41">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        team = Team.new({</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="42">
-            
-            
-
-            
-
-            <code class="ruby">            name: params[:team_name],</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="43">
-            
-            
-
-            
-
-            <code class="ruby">            season_wins: params[:season_wins].to_i,</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="44">
-            
-            
-
-            
-
-            <code class="ruby">            playoff_eligible: check_bool(params[:playoff_eligible])</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="45">
+          <li class="never" data-hits="" data-linenumber="36">
             
             
 
@@ -1703,7 +1604,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="46">
+          <li class="never" data-hits="" data-linenumber="37">
             
             
 
@@ -1714,7 +1615,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="47">
+          <li class="covered" data-hits="1" data-linenumber="38">
             <span class="hits">1</span>
             
 
@@ -1725,7 +1626,128 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="48">
+          <li class="covered" data-hits="1" data-linenumber="39">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        redirect_to &quot;/teams/#{team.id}&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="40">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="41">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="42">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    def create        </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="43">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        team = Team.new({</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="44">
+            
+            
+
+            
+
+            <code class="ruby">            name: params[:team_name],</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="45">
+            
+            
+
+            
+
+            <code class="ruby">            season_wins: params[:season_wins].to_i,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="46">
+            
+            
+
+            
+
+            <code class="ruby">            playoff_eligible: check_bool(params[:playoff_eligible])</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="47">
+            
+            
+
+            
+
+            <code class="ruby">        })</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="48">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="49">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        team.save</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="50">
             <span class="hits">1</span>
             
 
@@ -1736,7 +1758,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="49">
+          <li class="never" data-hits="" data-linenumber="51">
             
             
 
@@ -1747,7 +1769,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="50">
+          <li class="never" data-hits="" data-linenumber="52">
             
             
 
@@ -1758,7 +1780,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="51">
+          <li class="covered" data-hits="1" data-linenumber="53">
             <span class="hits">1</span>
             
 
@@ -1769,7 +1791,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="52">
+          <li class="covered" data-hits="1" data-linenumber="54">
             <span class="hits">1</span>
             
 
@@ -1780,7 +1802,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="53">
+          <li class="never" data-hits="" data-linenumber="55">
             
             
 
@@ -1791,7 +1813,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="54">
+          <li class="never" data-hits="" data-linenumber="56">
             
             
 
@@ -1802,7 +1824,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="55">
+          <li class="never" data-hits="" data-linenumber="57">
             
             
 
