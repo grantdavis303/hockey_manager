@@ -17,6 +17,7 @@ RSpec.describe "teams players index page", type: :feature do
             expect(page).to have_content(team.players[2].name)
         end
 
+        # User Story 16
         it 'lists all teams players in alphabetical order' do
             team = Team.create!(name: "Colorado Avalanche", season_wins: 44, playoff_eligible: true)
             team.players.create!(name: "Nathan MacKinnon", jersey_number: 29, won_cup: true)
